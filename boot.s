@@ -1,5 +1,7 @@
+	.set ALIGN, 1<<0
+	.set MEMINFO, 1<<1
 	.set MAGIC, 0x1BADB002
-	.set FLAGS, 74 // Just to check a value that isn't 0
+	.set FLAGS, ALIGN | MEMINFO
 	.set CHECKSUM, -(MAGIC + FLAGS)
 
 	.section .multiboot

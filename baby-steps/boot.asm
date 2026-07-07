@@ -4,12 +4,12 @@
 	
 	mov ah, 0 ; Set video mode	
 	mov al, 2 ; Mode 2: 80x25
-	int 10h
+	int 0x10
 
-	mov ah, 0ah ; Service 10: write text at cursor
-	mov al, 41h ; Character to write
-	mov cx, 14h ; Number of times to write
-	int 10h
+	mov ah, 0xA ; Service 10: write text at cursor
+	mov al, 0x41 ; Character to write
+	mov cx, 0x14 ; Number of times to write
+	int 0x10
 hang:
 	jmp hang
 	times 510-($-$$) db 0

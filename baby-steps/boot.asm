@@ -1,4 +1,3 @@
-hang:
 	mov ah, 0
 	mov al, 2
 	int 10h
@@ -7,7 +6,7 @@ hang:
 	mov al, 41h
 	mov cx, 14h
 	int 10h
-
+hang:
 	jmp hang
 	times 510-($-$$) db 0
 	db 0x55

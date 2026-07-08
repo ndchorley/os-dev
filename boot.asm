@@ -10,8 +10,7 @@
 	mov al, 0x41 ; Character to write
 	mov cx, 0x14 ; Number of times to write
 	int 0x10
-hang:
-	jmp hang
+
 	times 510-($-$$) db 0
 	db 0x55
 	db 0xAA

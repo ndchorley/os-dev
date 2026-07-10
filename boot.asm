@@ -2,8 +2,8 @@
 	; https://grandidierite.github.io/bios-interrupts/
 	; https://en.wikipedia.org/wiki/INT_10H
 	
-	mov ah, 0 ; Set video mode	
-	mov al, 2 ; Mode 2: 80x25
+	mov ah, 0x0 ; Set video mode
+	mov al, 0x2 ; Mode 2: 80x25
 	int 0x10
 
 	mov ah, 0xA ; Service 10: write text at cursor
